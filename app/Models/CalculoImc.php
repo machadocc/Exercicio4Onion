@@ -50,7 +50,7 @@ class CalculoImc extends Model
     private static function validaResultado(float $imc): string
     {
         switch($imc){
-            case $imc > 18.5:
+            case $imc < 18.5:
                 $resultado = "$imc - A baixo do peso";
             break;
             case $imc >= 18.5 && $imc <= 24.9:
